@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jsKitty MVC</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>		
+		<script type="text/javascript" src="./ejs/ejs_production.js"></script>	
+		<script type="text/javascript" src="./kitty.js"></script>	
+		<style>
+			.done span {
+				opacity: .2;
+			}
+			.todo {
+				font-family:arial;
+				font-size:13px;
+			}
+			.strike span {
+				text-decoration:line-through;
+			}
+			a {
+				font-size: 10px;
+				color: #36c;
+			}
+		</style>
+	</head>
+	<body>
+
+		<input type="text" id="TodoNameInput" />
+		<button id="button">Create Todo!</button>
+
+		<div id="container"></div>
+
+		<script type="text/javascript" src="./model/Todo.js"></script>
+		<script type="text/javascript" src="./controller/MainController.js"></script>
+		<script type="text/javascript" src="./view/Todo.js"></script>
+
+		<script type="text/javascript">
+			Controller.init();
+		</script>
+
+	</body>
+</html>
