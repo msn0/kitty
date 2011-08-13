@@ -1,7 +1,7 @@
 <div class='todo <%= done ? "done strike" : "" %>'>
-	<span><%= todo %></span>
-	<a href='javascript:void(0);' class='select'><%= done ? "undone" : "done" %></a>
-	<a href='javascript:void(0);' class='remove'>remove</a>
-	<a href='javascript:void(0);' class='edit'>edit</a>
+	<div class='todoText'><span><%= todo %></span></div>
+	<div class='controll todoDone'><button style='width:60px;' class='select'><%= done ? "undone" : "done" %></button></div>
+	<div class='controll todoRemove'><button style='width:60px;' class='remove'>remove</button></div>
+	<div class='controll todoEdit'><button style='width:40px;' class='edit'>edit</button></div>
 </div>
 
