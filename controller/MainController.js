@@ -5,8 +5,12 @@
      */
     var Controller = {
         init: function(){
-            //document.getElementById('TodoNameInput').focus();
-            document.getElementById('button').addEventListener('click', Controller.createNewTodo, false);
+            MJ.addEvent(document.getElementById('button'), 'click', Controller.createNewTodo);
+	    MJ.addEvent(document.getElementById('TodoNameInput'), 'keyup', function(e){
+                if(e.keyCode === 13){
+			Controller.createNewTodo();			
+                }
+            });
         },
         createNewTodo: function(){
             var todoValue = document.getElementById('TodoNameInput').value;
@@ -28,15 +32,20 @@
         },
         editTodo: function(todo){
             var todoValue = todo.model.todo;
-            var span = todo.el.getElementsByClassName('todoText')[0];
+            var span = MJ.getElementsByClassName(todo.el, 'todoText')[0];
             span.innerHTML = "<input class='editInput' type='text' value='"+todoValue+"'/>";
             
             var input = span.getElementsByTagName('input')[0];				
-            input.addEventListener('keyup', function(e){
+            MJ.addEvent(input, 'keyup', function(e){
                 if(e.keyCode === 13){
-                    todo.model.set("todo", e.srcElement.value);
+		    var target = e.target || e.srcElement;
+                    todo.model.set("todo", target.value);
                 }
-            }, false);
+            });
+	    MJ.addEvent(input, 'blur', function(e){
+		var target = e.target || e.srcElement;
+                todo.model.set("todo", target.value);
+            });
             input.focus();
         }
     };

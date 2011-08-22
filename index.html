@@ -3,7 +3,7 @@
     <head>
         <title>jsKitty MVC</title>
 	<meta charset="utf-8">
-        <script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>		
+	<script src="https://raw.github.com/msn0/mjlib/master/mjlib.js"></script>
         <script src="./ejs/ejs_production.js"></script>	
         <script src="./kitty.js"></script>	
         <link rel="stylesheet" href="./resources/css/main.css">
@@ -11,11 +11,18 @@
     <body>
         <div id="container">
             <div id="inputContainer">
-                <input type="text" id="TodoNameInput" placeholder="What would you like to do?">
-                <button id="button">Create Todo!</button>
+		<form action="javascript:void(0)">
+		    <div class="tool"><input type="text" id="TodoNameInput" placeholder="What would you like to do?"></div>
+		    <div class="tool"><input type="submit" id="button" value="Create Todo!"></div>
+		</form>
             </div>
             <div id="todoContainer"></div>
         </div>
+	<div id="footer">
+		<p class='footerhead'>This is <span class='kitty'>Kitty MVC</span> example application</p>
+		<p>More about javascript Kitty MVC:<br><a href="https://github.com/msn0/jsKitty-MVC" target="_blank">https://github.com/msn0/jsKitty-MVC</a></p>
+		<p>Created by<br>Michal Jezierski</p>
+	</div>
         <script src="./model/Todo.js"></script>
         <script src="./controller/MainController.js"></script>
         <script src="./view/Todo.js"></script>

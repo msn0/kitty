@@ -1,6 +1,13 @@
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
 body {
     margin:0;
     background-color: #a5a5a5;
+    font-family: arial;
 }
 .done .todoText {
     color:#a5a5a5;
@@ -25,18 +32,16 @@ a {
     border:0;
     padding: 0 10px;
     width:300px;
+    line-height: 40px;
 }
 #button {
     background: #333;
     border: 0;
     height: 40px;
     color: white;
-    padding: 0 10px;
     font-size: 16px;
     font-family: arial;
-    position:relative;
-    margin-left:-8px;
-    width:133px;
+    width:130px;
 }
 #button:hover {
     background: #555;
@@ -46,13 +51,21 @@ a {
     position:relative;
     margin:0 auto;
     width: 450px;
+    height:40px;
 }
 #container {
-    margin: 0 auto;
     width:450px;
-    background-color:white;
     position:relative;
     top:0px;
+    margin: 0 auto;
+}
+#footer {
+    margin: 30px auto;
+    width: 100%;
+    text-align: center;
+    text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 3px;
+    color: #333;
+    line-height: 1.4em;
 }
 .todoText {
     position:relative;
@@ -84,4 +97,27 @@ a {
 }
 .editInput {
     width:250px;
+}
+.tool {
+    position:relative;
+    float:left;
+}
+#footer a {
+    font-size: 13px;
+    text-decoration: underline;
+    color: #666;
+}
+#footer p {
+    margin: 24px auto;
+}
+.footerhead {
+    font-size: 20px;
+}
+.kitty {
+    color: ghostwhite;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 0 5px;
+}
+.controll button {
+    width: 60px;
+    line-height:22px;
 }

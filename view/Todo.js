@@ -10,21 +10,30 @@
         container: document.getElementById('todoContainer'),
         tag: "div",
         events: function(){
-            this.el.getElementsByClassName('select')[0].addEventListener('click', (function(todo){
+	    MJ.addEvent(MJ.getElementsByClassName(this.el, 'select')[0], 'click', (function(todo){
                 return function(){
                     Controller.toggleDone(todo);
                 };
-            })(this), false);
-            this.el.getElementsByClassName('remove')[0].addEventListener('click', (function(todo){
+            })(this));
+
+	    MJ.addEvent(MJ.getElementsByClassName(this.el, 'remove')[0], 'click', (function(todo){
                 return function(){
                     Controller.removeTodo(todo);
                 };
-            })(this), false);
-            this.el.getElementsByClassName('edit')[0].addEventListener('click', (function(todo){
+            })(this));
+
+	    MJ.addEvent(MJ.getElementsByClassName(this.el, 'edit')[0], 'click', (function(todo){
                 return function(){
                     Controller.editTodo(todo);
                 };
-            })(this), false);
+            })(this));
+
+	    MJ.addEvent(MJ.getElementsByClassName(this.el, 'todoText')[0], 'dblclick', (function(todo){
+                return function(){
+                    Controller.editTodo(todo);
+                };
+            })(this));
+
         }
     });
     
