@@ -1,0 +1,87 @@
+body {
+    margin:0;
+    background-color: #a5a5a5;
+}
+.done .todoText {
+    color:#a5a5a5;
+}
+.todo {
+    font-family:arial;
+    font-size:14px;
+    height:30px;
+    line-height:30px;
+}
+.strike .todoText {
+    text-decoration:line-through !important;
+}
+a {
+    font-size: 10px;
+    color: #36c;
+}
+#TodoNameInput {
+    font-size: 16px;
+    height: 40px;
+    background: #e5e5e5;
+    border:0;
+    padding: 0 10px;
+    width:300px;
+}
+#button {
+    background: #333;
+    border: 0;
+    height: 40px;
+    color: white;
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: arial;
+    position:relative;
+    margin-left:-8px;
+    width:133px;
+}
+#button:hover {
+    background: #555;
+    cursor:pointer;
+}
+#inputContainer {
+    position:relative;
+    margin:0 auto;
+    width: 450px;
+}
+#container {
+    margin: 0 auto;
+    width:450px;
+    background-color:white;
+    position:relative;
+    top:0px;
+}
+.todoText {
+    position:relative;
+    float:left;
+    width:260px;
+    background-color:#f0f0f0;
+    height:30px;
+    line-height:30px;
+    padding-left:10px;
+    white-space:nowrap;
+}
+.todoDone {
+    
+}
+.todoRemove {
+    
+}
+.todoEdit {
+    
+}
+.controll {
+    position:relative;
+    float:left;
+    background-color:#f0f0f0;
+    padding:0 3px;
+    text-align:center;
+    height:30px;
+    line-height:30px;
+}
+.editInput {
+    width:250px;
+}
