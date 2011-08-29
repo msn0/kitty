@@ -1,7 +1,7 @@
 (function(){
 
     /**
-     * Todo View
+     * TodoStats View
      */
     var TodoStatsView = new Kitty.View("TodoStatsView", {
         template: new EJS({
