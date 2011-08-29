@@ -3,9 +3,9 @@
     <head>
         <title>jsKitty MVC</title>
 	<meta charset="utf-8">
-	<script src="https://raw.github.com/msn0/mjlib/master/mjlib.js"></script>
-        <script src="./ejs/ejs_production.js"></script>	
-        <script src="./kitty.js"></script>	
+	<script src="./lib/mjlib/mjlib.js"></script>
+        <script src="./lib/ejs/ejs_production.js"></script>	
+        <script src="./lib/kitty.js"></script>	
         <link rel="stylesheet" href="./resources/css/main.css">
     </head>
     <body>
@@ -17,6 +17,7 @@
 		</form>
             </div>
             <div id="todoContainer"></div>
+	    <div id="todoDoneContainer"></div>
         </div>
 	<div id="footer">
 		<p class='footerhead'>This is <span class='kitty'>Kitty MVC</span> example application</p>
@@ -24,8 +25,10 @@
 		<p>Created by<br>Michal Jezierski</p>
 	</div>
         <script src="./model/Todo.js"></script>
+	<script src="./model/TodoDone.js"></script>
         <script src="./controller/MainController.js"></script>
         <script src="./view/Todo.js"></script>
+        <script src="./view/TodoDone.js"></script>
 
         <script>
             Controller.init();

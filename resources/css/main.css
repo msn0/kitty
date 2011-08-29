@@ -78,7 +78,7 @@ a {
     white-space:nowrap;
 }
 .todoDone {
-    
+
 }
 .todoRemove {
     
@@ -120,4 +120,10 @@ a {
 .controll button {
     width: 60px;
     line-height:22px;
+}
+.todoStats {
+    background: #555;
+    font-size: 14px;
+    padding: 10px;
+    color: white;
 }

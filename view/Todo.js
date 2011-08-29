@@ -33,7 +33,9 @@
                     Controller.editTodo(todo);
                 };
             })(this));
-
+        },
+        render: function(){
+            Controller.updateStats();
         }
     });
     
