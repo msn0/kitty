@@ -26,11 +26,11 @@
             }
         },
         createStats: function(){
-            var data = Kitty.Model.TodoDone.createTodoStats({
+            var data = Kitty.Model.TodoStats.createTodoStats({
                 done: 0,
                 total: 0
             });
-            var t = new Kitty.View.TodoDoneView(data);
+            var t = new Kitty.View.TodoStatsView(data);
             Controller.todoStatsInstance = data;
         },
         removeTodo: function(todo){

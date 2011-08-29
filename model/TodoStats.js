@@ -4,13 +4,13 @@
      * TodoStats Model
      * model name, default values
      */
-    var TodoDone = new Kitty.Model("TodoDone", {
+    var TodoStats = new Kitty.Model("TodoStats", {
         done: 0,
         total: 0
     });
 
-    TodoDone.createTodoStats = function(){
-        return new TodoDone({
+    TodoStats.createTodoStats = function(){
+        return new TodoStats({
             done: 0,
             total: 0
         });

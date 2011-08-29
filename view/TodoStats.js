@@ -3,14 +3,14 @@
     /**
      * Todo View
      */
-    var TodoDoneView = new Kitty.View("TodoDoneView", {
+    var TodoStatsView = new Kitty.View("TodoStatsView", {
         template: new EJS({
-            url: './view/TodoDone.ejs'
+            url: './view/TodoStats.ejs'
         }),
         container: document.getElementById('todoDoneContainer'),
         tag: "div"
     });
     
-    window.TodoDoneView = TodoDoneView;
+    window.TodoStatsView = TodoStatsView;
 
 })();
