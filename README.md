@@ -1,6 +1,8 @@
 Kitty
 =====
 
+Kitty is a lightweight (less than 2KB), very simple mvc written in pure javascript. It's still under construction and thus might be instable.
+
 Basic usage
 -----------
 
