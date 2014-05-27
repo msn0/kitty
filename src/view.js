@@ -18,8 +18,12 @@ var View = function (viewName, options) {
     };
     this._render = function () {
       this.el.innerHTML = this.template.render(this.model);
-      options.hasOwnProperty('events') && options.events.call(that);
-      options.hasOwnProperty('render') && options.render.call(that);
+      if(options.hasOwnProperty('events')) {
+        options.events.call(that);
+      }
+      if(options.hasOwnProperty('render')) {
+        options.render.call(that);
+      }
       return this;
     };
     this.remove = function () {
@@ -30,4 +34,4 @@ var View = function (viewName, options) {
   return Kitty.View[viewName];
 };
 
-Kitty.Model = Model;
+Kitty.View = View;

@@ -3,7 +3,7 @@ var Model = function (modelName, options) {
   this.modelName = modelName;
 
   var nextId = function () {
-    return Math.round(Math.random() * 100000000)
+    return Math.round(Math.random() * 100000000);
   };
 
   Kitty.Model[modelName] = function (options) {
