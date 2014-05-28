@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/msn0/kitty.png?label=ready&title=Ready)](https://waffle.io/msn0/kitty)
 Kitty
 =====
 
