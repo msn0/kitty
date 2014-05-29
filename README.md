@@ -1,4 +1,5 @@
 [![Stories in Ready](https://badge.waffle.io/msn0/kitty.png?label=ready&title=Ready)](https://waffle.io/msn0/kitty)
+[![Build Status](https://secure.travis-ci.org/msn0/kitty.png?branch=master)](http://travis-ci.org/msn0/kitty)
 Kitty
 =====
 
