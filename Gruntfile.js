@@ -28,6 +28,11 @@ module.exports = function (grunt) {
           'dist/kitty.min.js': 'dist/kitty.min.js'
         }
       }
+    },
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js'
+      }
     }
 
   });
@@ -36,9 +41,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-anonymous');
+  grunt.loadNpmTasks('grunt-karma');
 
   grunt.registerTask('build', [
-    'jshint', 'clean', 'uglify', 'anonymous'
+    'jshint', 'clean', 'karma', 'uglify', 'anonymous'
   ]);
 
   grunt.registerTask("default", ['build']);
