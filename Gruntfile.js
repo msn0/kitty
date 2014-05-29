@@ -43,10 +43,10 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-anonymous');
   grunt.loadNpmTasks('grunt-karma');
 
+  grunt.registerTask("test", ['karma']);
   grunt.registerTask('build', [
-    'jshint', 'clean', 'karma', 'uglify', 'anonymous'
+    'jshint', 'clean', 'test', 'uglify', 'anonymous'
   ]);
-
   grunt.registerTask("default", ['build']);
 
 };
