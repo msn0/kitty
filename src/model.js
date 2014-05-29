@@ -51,9 +51,7 @@ var Model = function (modelName, options) {
     };
     model.prototype.notify = function () {
       for (var key in model.views[this.objid]) {
-        if(model.views.hasOwnProperty(key)) {
-          model.views[this.objid][key]._render();
-        }
+        model.views[this.objid][key]._render();
       }
     };
     this.init();
