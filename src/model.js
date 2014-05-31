@@ -8,6 +8,7 @@ var Model = function (modelName, options) {
 
   Kitty.Model[modelName] = function (options) {
     var model = Kitty.Model[that.modelName];
+    options = options || {};
     model.prototype.modelProtoReference = that;
     this.objid = nextId();
     model.prototype.init = function () {
