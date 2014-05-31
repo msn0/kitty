@@ -7,14 +7,6 @@ describe("model", function () {
     });
   });
 
-  afterEach(function () {
-    delete Kitty.Model.Foo;
-  });
-
-  it("Kitty.Model.Foo should be defined", function () {
-    expect(Kitty.Model.Foo).toBeDefined();
-  });
-
   it("model has default attributes", function () {
     var foo = new this.Foo();
 
@@ -30,11 +22,35 @@ describe("model", function () {
     expect(foo.bar).toEqual("new-bar");
   });
 
+  it("setting non-model attributes is not allowed", function () {
+    var foo = new this.Foo({
+      qax: "qax"
+    });
+
+    expect(foo.qax).not.toBeDefined();
+  });
+
   it("two models have different ids", function () {
     var foo1 = new this.Foo();
     var foo2 = new this.Foo();
 
     expect(foo1.objid).not.toEqual(foo2.objid);
+  });
+
+  it("getting property", function () {
+    var foo = new this.Foo();
+
+    expect(foo.get("bar")).toEqual("bar");
+  });
+
+  it("setting property", function () {
+    var foo = new this.Foo();
+    foo.set({
+      "lorem": "ipsum",
+      "dolor": "sit"
+    });
+    expect(foo.get("lorem")).toEqual("ipsum");
+    expect(foo.get("dolor")).toEqual("sit");
   });
 
 });
