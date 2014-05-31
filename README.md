@@ -3,7 +3,7 @@
 Kitty
 =====
 
-Kitty is a lightweight (minified 1.7KB / 1KB gzipped), very simple mvc written in pure javascript.
+Kitty is a lightweight (minified 1.6KB / 1KB gzipped), very simple mvc written in pure javascript.
 
 Basic usage
 -----------
