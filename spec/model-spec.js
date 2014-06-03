@@ -49,8 +49,25 @@ describe("model", function () {
       "lorem": "ipsum",
       "dolor": "sit"
     });
+
     expect(foo.get("lorem")).toEqual("ipsum");
     expect(foo.get("dolor")).toEqual("sit");
+  });
+
+  it("model.remove() should remove model from collection", function () {
+    var foo = new this.Foo();
+
+    foo.remove();
+    expect(Kitty.Model.Foo.collection.indexOf(foo)).toEqual(-1);
+  });
+
+  it("model.remove() should remove views", function () {
+    var foo = new this.Foo();
+    var id = foo.objid;
+    Kitty.Model.Foo.views[id] = [];
+
+    foo.remove();
+    expect(Kitty.Model.Foo.views[id]).not.toBeDefined();
   });
 
 });
