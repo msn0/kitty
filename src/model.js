@@ -11,10 +11,6 @@ var Model = function (modelName, options) {
     model.prototype.modelProtoReference = that;
     this.objid = nextId();
 
-    var _getModelViews = function () {
-      return model.views[this.objid];
-    };
-
     model.prototype.init = function () {
       for (var key in model.defaults) {
         this[key] = options.hasOwnProperty(key) ? options[key] : model.defaults[key];
@@ -37,7 +33,7 @@ var Model = function (modelName, options) {
     };
 
     model.prototype.remove = function () {
-      var views = _getModelViews();
+      var views = model.views[this.objid];
       for (var key in views) {
         if (views.hasOwnProperty(key)) {
           views[key].remove();
