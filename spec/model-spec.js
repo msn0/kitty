@@ -70,7 +70,7 @@ describe("model", function () {
     expect(Kitty.Model.Foo.views[id]).not.toBeDefined();
   });
 
-  it("model.remove() calls view.remove()", function () {
+  it("model.remove() should call view.remove()", function () {
     var foo = new this.Foo();
     var id = foo.objid;
     var view = {
@@ -81,6 +81,19 @@ describe("model", function () {
 
     foo.remove();
     expect(view.remove).toHaveBeenCalled();
+  });
+
+  it("model.notify() should call view._render()", function () {
+    var foo = new this.Foo();
+    var id = foo.objid;
+    var view = {
+      _render: function () {}
+    };
+    spyOn(view, "_render");
+    Kitty.Model.Foo.views[id] = [view];
+
+    foo.notify();
+    expect(view._render).toHaveBeenCalled();
   });
 
 });
