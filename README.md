@@ -8,18 +8,15 @@ Kitty is a lightweight (minified 1.6KB / 1KB gzipped), very simple mvc written i
 Basic usage
 -----------
 
-*Model*
-
 ```js
+
+// define your model
 var Todo = new Kitty.Model("Todo", {
   todo: "",
   done: false
 });
-```
 
-*View*
-
-```js
+// define your view
 var TodoView = new Kitty.View("TodoView", {
   template: new EJS({
     url: './view/Todo.ejs'
@@ -33,4 +30,14 @@ var TodoView = new Kitty.View("TodoView", {
     // update your view
   }
 });
+
+// create a model instance
+var todo = new Todo({
+  todo: "I need to do sth"
+});
+
+// create a view for your model
+var todoView = new TodoView(todo);
+
+// that's all
 ```
