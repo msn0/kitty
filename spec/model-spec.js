@@ -96,4 +96,25 @@ describe("model", function () {
     expect(view._render).toHaveBeenCalled();
   });
 
+  it("setting property should call view._render()", function () {
+    var foo = new this.Foo();
+    spyOn(foo, "notify");
+
+    foo.set({
+      "lorem": "ipsum"
+    });
+    expect(foo.notify).toHaveBeenCalled();
+  });
+
+  it("setting multiple properties should call view._render() once", function () {
+    var foo = new this.Foo();
+    spyOn(foo, "notify");
+
+    foo.set({
+      "lorem": "ipsum",
+      "dolor": "sit"
+    });
+    expect(foo.notify.callCount).toBe(1);
+  });
+
 });
