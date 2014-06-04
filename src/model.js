@@ -40,14 +40,12 @@ var Model = function (modelName, options) {
         }
       }
       delete model.views[this.objid];
-      var removeIndex;
       for (var i = 0; i < model.collection.length; i++) {
         if (model.collection[i].objid === this.objid) {
-          removeIndex = i;
+          model.collection.splice(i, 1);
           break;
         }
       }
-      model.collection.splice(removeIndex, 1);
     };
 
     model.prototype.notify = function () {

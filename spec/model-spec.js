@@ -7,6 +7,10 @@ describe("model", function () {
     });
   });
 
+  afterEach(function () {
+    delete this.Foo;
+  });
+
   it("model has default attributes", function () {
     var foo = new this.Foo();
 
