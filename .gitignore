@@ -1,6 +1,5 @@
 .idea/
 .sonar/
 coverage/
-dist/
 node_modules/
 test-results.xml
