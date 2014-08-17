@@ -5,6 +5,11 @@ Kitty
 
 Kitty is a lightweight (minified 1.6KB / 1KB gzipped), very simple mvc written in pure javascript.
 
+Installation
+------------
+
+```bower install kitty --save```
+
 Basic usage
 -----------
 
