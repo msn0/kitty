@@ -46,3 +46,7 @@ var todoView = new TodoView(todo);
 
 // that's all
 ```
+
+Example
+-------
+[Todo Example](http://michal.jezile.net/kitty)
