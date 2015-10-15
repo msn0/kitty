@@ -4,7 +4,6 @@ describe("view", function () {
     var container = document.createElement("div");
     container.id = "foo-container";
     document.body.appendChild(container);
-    spyOn(Math, "round").andReturn(999);
     this.Foo = new Kitty.Model("Foo", {
       bar: "bar",
       baz: "baz"
@@ -24,7 +23,8 @@ describe("view", function () {
 
   it("should be appended to Foo.views", function () {
     this.fooView = new this.FooView(this.foo);
-    expect(Kitty.Model.Foo.views[999][0]).toEqual(this.fooView);
+    var key = Object.keys(Kitty.Model.Foo.views)[0];
+    expect(Kitty.Model.Foo.views[key][0]).toEqual(this.fooView);
   });
 
   it("should call events and render if present", function () {

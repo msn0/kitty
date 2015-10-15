@@ -114,7 +114,7 @@ describe("model", function () {
       "lorem": "ipsum",
       "dolor": "sit"
     });
-    expect(foo.notify.callCount).toBe(1);
+    expect(foo.notify.calls.count()).toBe(1);
   });
 
 });
